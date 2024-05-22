@@ -1,0 +1,52 @@
+---
+import Badge from "./Badge.astro";
+import SocialPil from "./SocialPil.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import GitHub from "../icons/GitHub.astro";
+import Instagram from "../icons/Instagram.astro";
+---
+
+<article class="w-full">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="../../public/foto.jpg"
+      alt="Bryan foto"
+    />
+    <a
+      href="https://www.linkedin.com/in/bryan-chavajay"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+
+  <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5x">
+    Hey, soy Bryan 👋.
+  </h1>
+
+  <p class="mt-6 text-xl text-gray-300 text-pretty">
+    +2 años de experiencia en la industría, <strong class="text-yellow-200"
+      >Ingeniero en Sistemas.</strong
+    >
+    <strong class="text-cyan-300"> De Guatemala</strong>, Especializado en el
+    desarrollo de aplicaciones web.
+  </p>
+
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPil href="https://www.linkedin.com/in/bryan-chavajay">
+      <Linkedin class="size-4 md:size-6" />
+      LindedIn
+    </SocialPil>
+    <SocialPil href="https://github.com/BryanChavajay">
+      <GitHub class="size-4 md:size-6" />
+      GitHub
+    </SocialPil>
+    <SocialPil href="https://www.linkedin.com/in/bryan-chavajay">
+      <Instagram class="size-4 md:size-6" />
+      Instagram
+    </SocialPil>
+  </nav>
+</article>

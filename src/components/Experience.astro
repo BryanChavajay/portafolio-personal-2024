@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Noviembre de 2023 - Actualidad",
+    title: "Analista programador",
+    description:
+      "Analista programador como Outsorcing, especializado en el mantenimiento de la base de datos y desarrollo con C#",
+    company: "Ssasa",
+  },
+  {
+    date: "Enero de 2024",
+    title: "Ejercicios Programación",
+    description:
+      "Desarrollo de plataforma con fines didacticos para personas que deseen mejorar su lógica de programación",
+    company: "Ssasa",
+  },
+  {
+    date: "Febrero de 2024",
+    title: "Mi contador app",
+    description:
+      "Desarrollo de punto de venta, especializado en los pequeños emprendimientos",
+    company: "Ssasa",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
