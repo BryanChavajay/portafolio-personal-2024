@@ -1,0 +1,84 @@
+---
+import IconAstro from "../icons/IconAstro.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Python from "../icons/Python.astro";
+import Golang from "../icons/Golang.astro";
+import Csharp from "../icons/Csharp.astro";
+import Docker from "../icons/Docker.astro";
+import Html from "../icons/Html.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import Sqlserver from "../icons/Sqlserver.astro";
+
+const TAGS = [
+  {
+    name: "JavaScript",
+    icon: JavaScript,
+    size: "size-14",
+  },
+  {
+    name: "Python",
+    icon: Python,
+    size: "size-16",
+  },
+  {
+    name: "Csharp",
+    icon: Csharp,
+    size: "size-16",
+  },
+  {
+    name: "Golang",
+    icon: Golang,
+    size: "size-16",
+  },
+  {
+    name: "HTML",
+    icon: Html,
+    size: "size-14",
+  },
+  {
+    name: "Docker",
+    icon: Docker,
+    size: "size-16",
+  },
+  {
+    name: "PostgreSQL",
+    icon: Postgresql,
+    size: "size-14",
+  },
+  {
+    name: "SqlServer",
+    icon: Sqlserver,
+    size: "size-14",
+  },
+  {
+    name: "Astro",
+    icon: IconAstro,
+    size: "size-14",
+  },
+];
+---
+
+<section class="">
+  <ul class="flex justify-center items-center gap-x-12 gap-y-12 flex-wrap">
+    {
+      TAGS.map((tag) => (
+        <li class="h-24 w-24 rounded-md border border-white/10 bg-gray-800/30 transition duration-500 hover:scale-105">
+          <span class="h-24 w-24 flex justify-center items-center">
+            <tag.icon class={tag.size} />
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+<!-- <section class="flex justify-center items-center gap-x-12 gap-y-12 flex-wrap">
+{
+  TAGS.map((item) => (
+    <div class="h-24 w-24 rounded-md border border-white/10 bg-gray-800/30 transition duration-500 hover:scale-105">
+      <div class="h-24 w-24 flex justify-center items-center">
+        <item.icon class={item.size} />
+      </div>
+    </div>
+  ))
+}
+</section> -->

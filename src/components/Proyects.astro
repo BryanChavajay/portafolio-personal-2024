@@ -11,27 +11,27 @@ import Csharp from "../icons/Csharp.astro";
 const TAGS = {
   ASTRO: {
     name: "Astro",
-    class: "bg-white/10 hover:bg-white/15 transition duration-300",
+    class: "bg-white/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: IconAstro,
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-white/10 hover:bg-white/15 transition duration-300",
+    class: "bg-yellow-200/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: JavaScript,
   },
   PYTHON: {
     name: "Python",
-    class: "bg-white/10 hover:bg-white/15 transition duration-300",
+    class: "bg-yellow-200/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: Python,
   },
   GOLANG: {
     name: "Golang",
-    class: "bg-white/10 hover:bg-white/15 transition duration-300",
+    class: "bg-cyan-200/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: Golang,
   },
   CSHARP: {
     name: "Csharp",
-    class: "bg-white/10 hover:bg-white/15 transition duration-300",
+    class: "bg-violet-400/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: Csharp,
   },
 };
@@ -79,7 +79,7 @@ const PROJECTS = [
                 {tags.map((tag) => (
                   <li>
                     <span
-                      class="flex gap-x-2 rounded-full text-xs py-1 px-2 bg-white/10 hover:bg-white/15 transition duration-300 border border-white/10"
+                      class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
                     >
                       <tag.icon class="size-4" />
                       {tag.name}

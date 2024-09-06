@@ -8,6 +8,8 @@ import Proyects from "../components/Proyects.astro";
 import Hero from "../components/Hero.astro";
 import AboutMe from "../components/AboutMe.astro";
 import ProfileCheck from "../icons/ProfileCheck.astro";
+import Skill from "../icons/Skill.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout
@@ -20,30 +22,38 @@ import ProfileCheck from "../icons/ProfileCheck.astro";
         <slot />
       </Hero>
     </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experiencia">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <BriefCase class="size-8" />
+          Experiencia laboral
+        </h2>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCase class="size-8" />
-        Experiencia laboral
-      </h2>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="proyectos">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Code class="size-8" />Proyectos destacados
+        </h2>
+        <Proyects />
+      </SectionContainer>
 
-    <SectionContainer class="py-16 md:py-24" id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Code class="size-8" />Proyectos
-      </h2>
-      <Proyects class="size-8" />
-    </SectionContainer>
+      <SectionContainer id="habilidades">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Skill class="size-8 text-white" />Habilidades
+        </h2>
+        <Skills />
+      </SectionContainer>
 
-    <!-- <SectionContainer id="sobre-mi">
-      <h2
-        class="flex items-center mb-6 text-2xl font-semibold gap-x-4 text-white"
-      >
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </h2>
-      <AboutMe />
-    </SectionContainer> -->
+      <!-- <SectionContainer id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-2xl font-semibold gap-x-4 text-white"
+        >
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer> -->
+    </div>
   </main>
 </Layout>
