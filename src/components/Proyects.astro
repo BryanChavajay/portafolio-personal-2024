@@ -7,6 +7,7 @@ import Link from "../icons/Link.astro";
 import Python from "../icons/Python.astro";
 import Golang from "../icons/Golang.astro";
 import Csharp from "../icons/Csharp.astro";
+import Postgresql from "../icons/Postgresql.astro";
 
 const TAGS = {
   ASTRO: {
@@ -34,9 +35,50 @@ const TAGS = {
     class: "bg-violet-400/10 hover:bg-white/15 transition duration-300 border border-white/10",
     icon: Csharp,
   },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-cyan-400/10 hover:bg-white/15 transition duration-300 border border-white/10",
+    icon: Postgresql,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "BryShort",
+    description:
+      "Acortador de urls, escrito en C#, con API REST y migraciones automáticas",
+    github: "https://github.com/BryanChavajay/bryshort",
+    image: "./en_construccion.webp",
+    tags: [TAGS.CSHARP, TAGS.POSTGRESQL],
+    link: null
+  },
+  {
+    title: "Analisis de datos",
+    description:
+      "Ejercicios de analisis de datos de diferentes datasets, utilizando Pandas",
+    github: "https://github.com/BryanChavajay/python-dashboards",
+    image: "./en_construccion.webp",
+    tags: [TAGS.PYTHON],
+    link: null
+  },
+  {
+    title: "Harmony Flow",
+    description:
+      "Aplicación para la gestión de proyectos de software, con pruebas automatizadas",
+    github: "https://github.com/BryanChavajay/harmonyflow",
+    image: "./harmonyflow.webp",
+    tags: [TAGS.JAVASCRIPT],
+    link: null
+  },
+  {
+    title: "Juegos",
+    description:
+      "Pequeños juegos creados con pygame",
+    github: "https://github.com/BryanChavajay/pygame-exercises",
+    image: "./pygame.webp",
+    tags: [TAGS.PYTHON],
+    link: null
+  },
   {
     title: "Probando Frameworks Web",
     description:
@@ -44,15 +86,7 @@ const PROJECTS = [
     github: "https://github.com/BryanChavajay/probando-frameworks-web-backend",
     image: "./project02.webp",
     tags: [TAGS.PYTHON, TAGS.CSHARP, TAGS.JAVASCRIPT, TAGS.GOLANG],
-  },
-  {
-    title: "Retro Arcade",
-    description:
-      "Plataforma gratuita que alberga una amplia colección variada de juegos retros. Creada desde cero utilizando Astro, html, css y JavaScript. Ven y diviertete.",
-    link: "#",
-    github: "#",
-    image: "./project01.webp",
-    tags: [TAGS.JAVASCRIPT, TAGS.ASTRO],
+    link: null
   },
 ];
 ---
@@ -67,7 +101,7 @@ const PROJECTS = [
               src={image}
               alt={title}
               loading="lazy"
-              class="h-56 w-full object-cover sm:h-full rounded-md"
+              class="max-h-64 w-full object-cover sm:h-full rounded-md"
             />
           </div>
           <div class="flex flex-col justify-between w-full sm:w-3/5 md:w-3/5 lg:w-1/2 p-4">
